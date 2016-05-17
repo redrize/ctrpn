@@ -1,0 +1,45 @@
+<!-- views/pages/login.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../views/partials/head %>
+</head>
+<body class="container">
+
+    <header>
+        <% include ../views/partials/header %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <form action="/login" method="post">
+	<div>
+	<label>Логин:</label>
+	<input type="text" name="username"/><br/>
+	</div>
+	<div>
+	<label>Пароль:</label>
+	<input type="password" name="password"/>
+	</div>
+	<div>
+	<input type="submit" value="Submit"/>
+	</div>
+</form>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../views/partials/footer %>
+    </footer>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+

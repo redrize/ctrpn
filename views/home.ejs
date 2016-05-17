@@ -1,0 +1,32 @@
+<!-- views/pages/home.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../views/partials/head %>
+</head>
+<body class="container">
+
+    <header>
+        <% include ../views/partials/header %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <% if (!user) { %>
+			<p>Добро пожаловать! Пожалуйста <a href="/login">войдите</a> в систему.</p>
+			<% } else { %>
+			<p>Здравствуйте, <%= user.username %>. Просмотр вашего <a href="/profile">профиля</a>.</p>
+			<% } %>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../views/partials/footer %>
+    </footer>
+    
+</body>
+</html>
+
+
+

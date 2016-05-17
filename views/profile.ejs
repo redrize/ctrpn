@@ -1,0 +1,39 @@
+<!-- views/pages/profile.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../views/partials/head %>
+</head>
+<body class="container">
+
+    <header>
+        <% include ../views/partials/header %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <p>
+			ID: <%= user.id %><br/>
+			Пользователь: <%= user.username %><br/>
+			Имя: <%= user.displayName %><br/>
+			<% if (user.emails) { %>
+			Email: <%= user.emails[0].value %><br/>
+			<% } %>
+			</p>
+<a href="/logout">Выйти</a>
+	</div>
+</form>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../views/partials/footer %>
+    </footer>
+    
+</body>
+</html>
+
+
+
+
